@@ -85,8 +85,8 @@ function PokemonDetail() {
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {state.pokemonDetails.stats.map((stat: any) => (
-                                    <TableRow>
+                                {state.pokemonDetails.stats.map((stat: any, index: number) => (
+                                    <TableRow key={index}>
                                         <TableCell>{stat.stat.name}</TableCell>
                                         <TableCell>{stat.base_stat}</TableCell>
                                         <TableCell>{stat.effort}</TableCell>
